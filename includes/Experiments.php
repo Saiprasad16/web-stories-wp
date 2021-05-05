@@ -375,6 +375,7 @@ class Experiments extends Service_Base {
 				'label'       => __( 'Video optimization pre-publish checklist', 'web-stories' ),
 				'description' => __( 'Optimize already uploaded videos.', 'web-stories' ),
 				'group'       => 'editor',
+				'default'     => true,
 			],
 			/**
 			 * Author: @spacedmonkey
