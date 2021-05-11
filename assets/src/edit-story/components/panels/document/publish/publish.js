@@ -18,7 +18,7 @@
  * External dependencies
  */
 import { useCallback, useRef, useMemo } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { __, sprintf } from '@web-stories-wp/i18n';
 
 /**
@@ -58,11 +58,6 @@ const MediaWrapper = styled.div`
 const StyledMedia = styled(Media)`
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
-  ${({ isHighlighted }) =>
-    isHighlighted &&
-    css`
-      ${styles.OUTLINE}
-    `}
 `;
 
 const HighlightRow = styled(Row)`
@@ -192,7 +187,6 @@ function PublishPanel() {
           <MediaInputWrapper>
             <MediaWrapper>
               <StyledMedia
-                isHighlighted={highlightPoster?.showEffect}
                 ref={posterButtonRef}
                 width={54}
                 height={96}
@@ -213,7 +207,6 @@ function PublishPanel() {
           <MediaInputWrapper>
             <MediaWrapper>
               <StyledMedia
-                isHighlighted={highlightLogo?.showEffect}
                 width={72}
                 height={72}
                 ref={publisherLogoRef}
